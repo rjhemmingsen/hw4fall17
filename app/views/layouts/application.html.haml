@@ -1,13 +1,16 @@
 !!!
 %html
   %head
-    %title Rotten Potatoes!
+    %title Rotten Olives!
     = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   %body
-    %h1.title Rotten Potatoes!
+    %h1.title Rotten Olives!
+    
+    <%= button_to "Sign Up / Login", action: "signUpLogin" %>
+    
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]
