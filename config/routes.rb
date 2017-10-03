@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :users
   
   match '/login', to: 'sessions#new', via: :get
-
+  
   match '/login_create', to: 'sessions#create', via: :post
   
   match '/logout', to: 'sessions#destroy', via: :delete
