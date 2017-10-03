@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
     end
     
     def destroy
-        session[session_token] = nil
+        session.delete(:session_token)
         flash[:sucess] = "Log out successful"
         redirect_to movies_path
     end
